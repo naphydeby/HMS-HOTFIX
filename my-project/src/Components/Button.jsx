@@ -4,8 +4,8 @@ const Button = ({username, password}) => {
   return (
     <>
    
-    <button className=' mt-5 w-28 h-10 bg-violet-600 text-gray-400 rounded-lg text-[13px] font-semibold'onClick={()=>{alert(``)
-    }}>Sign in</button>
+    <button style={{borderWidth:2, borderColor:"blue",width:200, marginTop:"20px"}} onClick={()=>{alert(``)
+    }}>Button</button>
     </>
   )
 }
