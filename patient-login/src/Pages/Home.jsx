@@ -8,8 +8,14 @@ const Home = () => {
         <div className='flex flex-col px-28 '>
         
             <div className='mt-4'>
+                <div className='w-36 h-36 rounded-full bg-[#483d8b]'>
 
-                 <img src="src/assets/Images/Animation - 1728548578534.gif" alt="" />
+                 <img src="src/assets/Images/Animation - 1728548578534.gif"
+                 data-aos="fade-up"
+                 alt="" className='rounded-[360px] w-32 h-32 mx-auto mt-4'/>
+
+                </div>
+
                  <h1 className='text-[25px] font-bold'>BetterHealth</h1>
 
            </div>

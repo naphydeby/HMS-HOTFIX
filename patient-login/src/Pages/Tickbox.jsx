@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
+import {Link} from "react-router-dom"
 
 
 const Tickbox = () => {
@@ -16,7 +17,7 @@ const Tickbox = () => {
              <label htmlFor='tickbox' className='p-1 text-[11px] mt-[-10px]'>Remember me</label>
         </div>
         <div className='mt-[-30px] text-[11px] '>
-            <h1>Forgot password?</h1>
+            <Link to={`/`}>Forgot password?</Link> 
         </div>
    </div>
    

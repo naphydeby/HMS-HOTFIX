@@ -1,8 +1,9 @@
 import React from 'react'
 import { useState } from 'react'
 import SignUp from './SignUp'
-import Button from "./Button"
+import SignIn from "./SignIn"
 import Tickbox from '../Pages/Tickbox'
+
 
 
 
@@ -20,7 +21,7 @@ const Form = () => {
        }}/> <br /> 
       
        <Tickbox/>
-       <Button password={password} username={username}/>
+       <SignIn password={password} username={username}/>
        <SignUp/>
        
 
