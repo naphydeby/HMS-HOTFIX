@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import logo from '../assets/images/logo.png'
+import anime from '../assets/images/anime.gif'
 import custom from '../assets/images/custom-17.svg'
 import '../App.css'
 import { TbLayoutDashboardFilled } from "react-icons/tb";
@@ -10,6 +10,10 @@ import { TbDeviceAnalytics } from "react-icons/tb";
 import { RiArrowDropDownLine } from "react-icons/ri";
 import { FaUsers } from "react-icons/fa";
 import { CgMenuLeft } from "react-icons/cg";
+import { FaHospital } from "react-icons/fa";
+import { BsCalendarDate } from "react-icons/bs";
+import { MdAccessibilityNew } from "react-icons/md";
+import { FaBed } from "react-icons/fa";
 
 const SideBar = () => {
 
@@ -48,10 +52,37 @@ const SideBar = () => {
     setShowDoctorsDropdown((prev) => !prev);
   };
   return (
-    <div className="grid grid-cols-[16rem_1fr]" >
-        <aside className="w-[270px] h-screen bg-violet-50 fixed top-0 left-0 ">
-                <div className="w-[270px] h-20 fixed flex items-center justify-center ">
-                    <img src={logo} alt="logo" />
+    <div className="lg:grid lg:grid-cols-[16rem_1fr]" >
+        <aside className='w-screen h-20 top-0 bg-violet-50 md:hidden lg:hidden fixed z-50'>
+        <div className='flex gap-4 items-center justify-center'>
+                        <div className="w-14 h-14 rounded-full bg-[#483d8b]">
+                            <img
+                                src={anime}
+                                data-aos="fade-up"
+                                alt="Doctor Illustration"
+                                className="rounded-[360px] w-12 h-12 mx-auto "
+                            />
+                        </div>
+ 
+                        <h1 className="self-center  text-2xl font-semibold pt-2">Better Health</h1>
+                    </div>
+        </aside>
+        <aside className="w-[270px] h-[120vh] md:block bg-violet-50 fixed top-0 left-0 hidden lg:block">
+                <div className="w-[270px] h-20 fixed gap-2 flex items-center justify-center ">
+                    <div className='flex gap-4'>
+                        <div className="w-14 h-14 rounded-full bg-[#483d8b]">
+                            <img
+                                src={anime}
+                                data-aos="fade-up"
+                                alt="Doctor Illustration"
+                                className="rounded-[360px] w-12 h-12 mx-auto "
+                            />
+                        </div>
+ 
+                        <h1 className="self-center  text-2xl font-semibold pt-2">Better Health</h1>
+                    </div>
+                    {/* <img src={anime} alt=""  className='w-12 h-12'/>
+                    <h1 className='text-3xl text-indigo-900'>BETTERLIFE</h1> */}
                 </div>
                 <div className="mt-20">
                     <div className="max-h-[100%] overflow-x-auto  no-scrollbar flex flex-col w-[270px] h-screen px-7">
@@ -118,84 +149,38 @@ const SideBar = () => {
                         <div className="flex flex-col gap-y-7 mt-8 ">
                             <p className="text-[12px] text-blue-800 ">COMPONENTS</p>
                             <div className="flex flex-col gap-y-7 mt-2">
-                                {/* <div className="" onClick={features}> */}
-                                    <div onClick={features}>
-                                        <div className="flex w-60 justify-between flex-row">
-                                            <div className="flex justify-between w-24 items-center">
-                                                <CgMenuLeft className="text-xl"/>
-                                                <a href="#" >Features</a>
-                                            </div>
-                                            <RiArrowDropDownLine className="text-xl" />
-
-                                        </div>
-                                       
-                                        {featuresdropdown && (
-                                        <div className="flex flex-col items-center justify-center my-4 text-start">
-                                            <ul className="space-y-4">
-                                                <li className="list-disc"><a href="#">Card</a></li>
-                                                <li className="list-disc"><a href="#">BS UI</a></li>
-                                                <li className="list-disc"><a href="#">Icons</a></li>
-                                                <li className="list-disc"><a href="#">Custom UI</a></li>
-                                                <li className="list-disc"><a href="#">Components</a></li>
-                                            </ul>
-                                        </div>
-                                        )}
-                                    {/* </div> */}
+                                <div className="flex w-20 justify-between">
+                                    <CgMenuLeft className="text-xl"/>
+                                    <a href="#" >Billing</a>
                                 </div>
                                 
 
-                                <div >
-                                    <a href="#" onClick={forms} className="hover:text-blue-400">Forms, Tables & Charts</a>
-                                    {formsdropdown && (
-                                    <div className="flex flex-col items-center justify-center my-4 text-start">
-                                        <ul className="space-y-4">
-                                            <li className="list-disc hover:text-blue-400"><a href="#">Forms</a></li>
-                                            <li className="list-disc hover:text-blue-400"><a href="#">Tables</a></li>
-                                            <li className="list-disc hover:text-blue-400"><a href="#">Charts</a></li>
-                                        </ul>
-                                    </div>
-                                    )}
+                                <div className="flex w-24 justify-between ">
+                                    <FaHospital className="text-xl"/>
+                                    <a href="#" onClick={forms} className="hover:text-blue-400">Facilities</a>
                                 </div>
 
                                 <div >
-                                    <a href="#" onClick={apps} className="hover:text-blue-400">Apps $ Widgets</a>
-                                    {appsdropdown && (
-                                    <div className="flex flex-col items-center justify-center my-4 text-start">
-                                        <ul className="space-y-4">
-                                            <li className="list-disc hover:text-blue-400"><a href="#">Apps</a></li>
-                                            <li className="list-disc hover:text-blue-400"><a href="#">Widgets</a></li>
-                                            <li className="list-disc hover:text-blue-400"><a href="#">Ecommerce</a></li>
-                                            <li className="list-disc hover:text-blue-400"><a href="#">Sample Pages</a></li>
-                                        </ul>
+                                    <div className="flex w-32 justify-between ">
+                                        <BsCalendarDate className="text-xl"/>
+                                        <a href="#" onClick={apps} className="hover:text-blue-400">Appointments</a>
                                     </div>
-                                    )}
+                                    
                                 </div>
 
                                 <div>
-                                    <a href="#" onClick={auth} className="hover:text-blue-400">Authentication</a>
-                                    {authdropdown && (
-                                    <div className="flex flex-col items-center justify-center my-4 text-start">
-                                        <ul className="space-y-4">
-                                            <li className="list-disc hover:text-blue-400"><a href="#">Apps</a></li>
-                                            <li className="list-disc hover:text-blue-400"><a href="#">Widgets</a></li>
-                                            <li className="list-disc hover:text-blue-400"><a href="#">Ecommerce</a></li>
-                                            <li className="list-disc hover:text-blue-400"><a href="#">Sample Pages</a></li>
-                                        </ul>
+                                    <div className="flex w-28 justify-between ">
+                                        <MdAccessibilityNew className="text-2xl"/>
+                                        <a href="#" onClick={auth} className="hover:text-blue-400">Outpatients</a>
                                     </div>
-                                    )}
+                                    
                                 </div>
 
                                 <div >
-                                    <a href="#" onClick={misc} className="hover:text-blue-400">Miscellaneous</a>
-                                    {miscdropdown && (
-                                    <div className="flex flex-col items-center justify-center my-4 text-start">
-                                        <ul className="space-y-4">
-                                            <li className="list-disc hover:text-blue-400"><a href="#">Error 404</a></li>
-                                            <li className="list-disc hover:text-blue-400"><a href="#">Error 500</a></li>
-                                            <li className="list-disc hover:text-blue-400"><a href="#">Maintenance</a></li>
-                                        </ul>
+                                    <div className="flex w-28 justify-between ">
+                                        <FaBed className="text-2xl"/>
+                                        <a href="#" onClick={misc} className="hover:text-blue-400">Inpatients</a>
                                     </div>
-                                    )}
                                 </div>
                             </div>
                         </div>
